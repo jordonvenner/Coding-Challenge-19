@@ -51,17 +51,15 @@ export default function TourCard({
         </div> 
 
         <p> 
-        {readMore ? info : (info ? `${info.substring(0, 150)}...` : 'No information available')}
+        {/* Displays the first 150 characters followed by ... when 'Read More' is displayed on the button */}
+        {readMore ? info : (info ? `${info.substring(0, 150)}...` : 'No Tour information available')} 
 
-          //{readMore ? info : `${info}...`} 
 
           <button  
 
             className="read-more"  
 
-            onClick={() => setReadMore(!readMore)} 
-
-          > 
+            onClick={() => setReadMore(!readMore)} > 
 
             {readMore ? 'Show Less' : 'Read More'} 
 
@@ -73,9 +71,7 @@ export default function TourCard({
 
           className="remove-btn"  
 
-          onClick={() => onRemove(id)} 
-
-        > 
+          onClick={() => onRemove(id)} > 
 
           Not Interested 
 
