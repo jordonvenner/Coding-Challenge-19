@@ -2,7 +2,7 @@ import { useState } from 'react';
 
 import Gallery from './components/Gallery'; 
 
-//import './styles/styles.css'; 
+import './styles/styles.css'; 
 
  
 
