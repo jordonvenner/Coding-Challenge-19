@@ -1,3 +1,14 @@
+html, body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+
+  display: flex;
+  justify-content: center; /* Horizontal alignment */
+}
+
+
+
 .app { 
     
   max-width: 800px; 
@@ -53,3 +64,107 @@
 }
 
   
+/* Style the tour cards and buttons.*/
+
+.tour-card {
+  background: #fff;
+  border-radius: 0.5rem;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s linear;
+  overflow: hidden; /* Ensures image respects border radius */
+}
+
+.tour-card:hover {
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.tour-card img {
+  width: 100%;
+  height: 20rem;
+  object-fit: cover; /* Prevents image distortion */
+  border-top-left-radius: 0.5rem;
+  border-top-right-radius: 0.5rem;
+}
+
+.tour-info {
+  padding: 1.5rem;
+}
+
+.tour-header {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 1rem;
+  align-items: center;
+}
+
+.price {
+  background: #ebf7ff;
+  color: #49a6e9;
+  padding: 0.25rem 0.5rem;
+  border-radius: 0.25rem;
+  font-weight: bold;
+}
+
+/* Read More/Show Less Button */
+.read-more {
+  background: transparent;
+  border: none;
+  color: #49a6e9;
+  cursor: pointer;
+  font-size: 0.9rem;
+  padding: 0.25rem 0.5rem;
+  margin-left: 0.5rem;
+}
+
+/* Not Interested Button */
+.remove-btn {
+  display: block;
+  width: 100%;
+  margin-top: 1rem;
+  padding: 0.5rem;
+  background: transparent;
+  color: #bb2525;
+  border: 1px solid #bb2525;
+  border-radius: 0.25rem;
+  cursor: pointer;
+  font-weight: bold;
+  transition: all 0.3s linear;
+}
+
+.remove-btn:hover {
+  background: #bb2525;
+  color: white;
+}
+
+
+
+
+
+/* Ensure responsiveness on tablet and mobile.*/
+/* Tablet (768px and below) */
+@media (max-width: 768px) {
+  .gallery {
+    grid-template-columns: repeat(2, 1fr); /* 2 columns */
+    gap: 1.5rem;
+  }
+
+  .tour-card img {
+    height: 15rem;
+  }
+}
+
+/* Mobile (480px and below) */
+@media (max-width: 480px) {
+  .gallery {
+    grid-template-columns: 1fr; /* 1 column */
+    gap: 1rem;
+  }
+
+  .app {
+    padding: 1rem; /* Reduced padding on small screens */
+  }
+
+  .tour-info {
+    padding: 1rem;
+  }
+}

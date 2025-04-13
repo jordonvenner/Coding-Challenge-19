@@ -30,6 +30,8 @@ export default function TourCard({
 
 }) { 
 
+
+  {/*readMore would be false at the beginning*/}
   const [readMore, setReadMore] = useState(false); 
 
  
