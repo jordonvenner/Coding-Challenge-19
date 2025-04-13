@@ -3,6 +3,7 @@ import { useState } from 'react';
 import Gallery from './components/Gallery'; 
 
 import './styles/styles.css'; 
+import TourCard from './components/TourCard';
 
  
 
@@ -26,8 +27,8 @@ function App() {
 
       <h1>Our Tours</h1> 
 
-      <Gallery tours={tours} setTours={setTours} /> 
-
+      <Gallery tours={tours} setTours={setTours} onRemoveTour={handleRemoveTour} /> 
+      
     </div> 
 
   ); 

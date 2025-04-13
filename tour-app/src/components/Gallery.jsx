@@ -18,7 +18,7 @@ import TourCard from './TourCard';
 
  
 
-const API_URL = 'https://course-api.com/react-tours-project'; 
+const API_URL = 'https://www.course-api.com/react-tours-project'; 
 
  
 
